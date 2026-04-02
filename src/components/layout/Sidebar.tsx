@@ -10,7 +10,8 @@ import {
   TrendingUp, 
   Target, 
   Calendar,
-  Wallet 
+  Wallet,
+  FileText
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -23,6 +24,7 @@ const routes = [
   { href: '/debts', label: 'Dívidas', icon: Wallet },
   { href: '/goals', label: 'Metas', icon: Target },
   { href: '/calendar', label: 'Calendário', icon: Calendar },
+  { href: '/reports', label: 'Relatórios', icon: FileText },
 ]
 
 export function Sidebar() {

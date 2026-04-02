@@ -91,9 +91,9 @@
 
 - [ ] **Sincronização Bancária (Open Finance):** Conexão automática com bancos brasileiros (Pluggy/Belvo).
 - [ ] **Transações Recorrentes:** Automação de assinaturas e contas fixas (Netflix, Aluguel).
-- [ ] **Notificações Push / Email:** Alertas automáticos para contas que vencem amanhã.
+- [x] **Notificações Push / Email:** Alertas automáticos para contas que vencem amanhã.
 - [ ] **Workspaces Compartilhados:** Convite de usuários para gerir finanças em conjunto (Casal/Equipe).
-- [ ] **Gerador de Relatórios em PDF:** Exportação de balancetes mensais e anuais formatados.
+- [x] **Gerador de Relatórios em PDF:** Exportação de balancetes mensais e anuais formatados.
 - [ ] **Dashboard de Investimentos Avançado:** Integração com APIs de cotação em tempo real (Yahoo Finance/AlphaVantage).
 
 ---

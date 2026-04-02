@@ -109,6 +109,17 @@ export function DashboardCharts() {
     return Object.values(cats).sort((a, b) => b.value - a.value).slice(0, 5)
   }, [transactions])
 
+  const categoryChartConfig = useMemo(() => {
+    const config: ChartConfig = {}
+    categoryData.forEach((item, idx) => {
+      config[item.name] = {
+        label: item.name,
+        color: item.fill,
+      }
+    })
+    return config
+  }, [categoryData])
+
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value)
   }
@@ -262,7 +273,7 @@ export function DashboardCharts() {
             ) : (
                 <div className="w-full flex-1 flex flex-col min-h-0">
                     <div className="h-[220px] w-full shrink-0">
-                        <ResponsiveContainer width="100%" height="100%">
+                        <ChartContainer config={categoryChartConfig} className="w-full h-full aspect-auto">
                             <PieChart>
                                 <Pie
                                     data={categoryData}
@@ -280,7 +291,7 @@ export function DashboardCharts() {
                                 </Pie>
                                 <ChartTooltip content={<ChartTooltipContent hideLabel />} />
                             </PieChart>
-                        </ResponsiveContainer>
+                        </ChartContainer>
                     </div>
                     
                     <div className="mt-4 space-y-2 w-full overflow-y-auto max-h-[140px] pr-1 scrollbar-hide">

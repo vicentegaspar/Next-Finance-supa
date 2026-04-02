@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Search, Bell, Menu } from 'lucide-react'
+import { PushNotificationManager } from '@/components/notifications/PushNotificationManager'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import {
@@ -60,11 +61,10 @@ export async function Header() {
           <WorkspaceSwitcher />
         </div>
 
-        <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground">
-          <Bell className="size-5" />
-        </Button>
+        <PushNotificationManager />
 
         <DropdownMenu>
+
           <DropdownMenuTrigger render={<Button variant="ghost" className="relative h-8 w-8 rounded-full border border-border" />}>
             <Avatar className="h-8 w-8">
               <AvatarImage src={profile?.avatar_url || ''} alt="User Avatar" />
